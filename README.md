@@ -1,2 +1,2 @@
 # Portfolio
-Portfolio personnel
+Portfolio personnel, présentation des différents projets et compétences.
