@@ -27,6 +27,7 @@
 :root {
     --light-blue: #96bdc6ff;
     --space-cadet: #1b1f3bff;
+    --light-blue-variant: rgb(189, 240, 252);
     --white: #ffffffff;
     --rich-black: #00171fff;
     --prussian-blue: #003459ff;
@@ -89,8 +90,11 @@ nav>ul>li:not(.no-border)>a {
     padding: unset;
 }
 
-/* Sections */
+#avatar-smile {
+    border-radius: 2%;
+}
 
+/* Sections */
 section {
     border-radius: 1rem;
     display: flex;
@@ -106,9 +110,6 @@ section {
 }
 
 /* Presentation section */
-#avatar-smile {
-    border-radius: 2%;
-}
 
 /* Map */
 #map-chartreux {
@@ -122,4 +123,23 @@ section {
     height: 100%;
     border: 0;
     border-radius: 1rem;
+}
+
+/* Socials */
+#socials {
+    border: 1px solid var(--space-cadet);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#socials img {
+    width: 1vw;
+    margin: 0 1vw 0 1vw;
+    padding-bottom: 1rem;
 }
