@@ -1,9 +1,43 @@
+/**
+ * FILEPATH: /home/y0plait/OneDrive_a.moulin@eleve.leschartreux.net/DevPerso/Portfolio/main.css
+ * 
+ * This CSS file contains styling for a portfolio website.
+ * It defines variables for color values and applies styles to the navbar and sections.
+ * 
+ * Variables:
+ * - --light-blue: Light blue color value (#96bdc6ff)
+ * - --goldenrod: Goldenrod color value (#d5a021ff)
+ * - --space-cadet: Space cadet color value (#1b1f3bff)
+ * 
+ * Selectors:
+ * - :root: Sets the CSS variables for the entire document
+ * - nav: Styles the navigation bar
+ * - body>nav: Styles the navigation bar when it is a direct child of the body element
+ * - nav>ul>li: Styles the list items in the navigation bar
+ * - nav>ul>li:not(.no-border):hover: Styles the list items on hover, excluding those with the class "no-border"
+ * - nav>ul>li:not(.no-border)>a: Styles the links within the list items, excluding those with the class "no-border"
+ * - .no-border: Styles elements with the class "no-border"
+ * - .no-border>img: Styles images within elements with the class "no-border"
+ * - section: Styles the sections of the website
+ * - #presentation: Styles the presentation section
+ * - #parcours: Styles the parcours section
+ * - #contact: Styles the contact section
+ */
+
 :root {
     --light-blue: #96bdc6ff;
-    --goldenrod: #d5a021ff;
     --space-cadet: #1b1f3bff;
+    --white: #ffffffff;
+    --rich-black: #00171fff;
+    --prussian-blue: #003459ff;
+    --cerulean: #007ea7ff;
+    --picton-blue: #00a8e8ff;
+    --seasalt: #f9f9f9ff;
 }
 
+body {
+    background-color: var(--seasalt);
+}
 /* Navbar */
 nav {
     background-color: var(--space-cadet);
@@ -15,28 +49,39 @@ nav {
     position: fixed;
 }
 
-body > nav {
+body>nav {
     margin-left: 0%;
+    border-radius: 1rem;
 }
 
-nav > ul > li {
+nav>ul>li {
     list-style: none;
     padding: 1rem;
     text-align: center;
     border: 1px solid var(--light-blue);
+    border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
-nav > ul > li > a {
+nav>ul>li:not(.no-border):hover {
+    background-color: var(--light-blue);
+
+    a {
+        cursor: initial;
+        color: var(--space-cadet);
+    }
+}
+
+nav>ul>li:not(.no-border)>a {
     text-decoration: none;
     color: var(--light-blue);
 }
 
-.no-border  {
+.no-border {
     border: none;
 }
 
-.no-border > img {
+.no-border>img {
     width: 5vw;
     padding: unset;
 }
@@ -44,28 +89,15 @@ nav > ul > li > a {
 /* Sections */
 
 section {
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: justify;
     align-items: center;
-    height: 98vh;
+    height: 96vh;
     width: 87.5%;
-    margin-left: 10.5%;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    padding-right: 1%;
-    padding-left: 1%;
-}
-
-#presentation {
+    margin: 0.5% 0 0.5% 10.5%;
+    padding: 1vh 1% 1vh 1%;
     background-color: var(--light-blue);
-}
-
-#parcours {
-    background-color: var(--goldenrod);
-}
-
-#contact {
-    background-color: var(--space-cadet);
 }
