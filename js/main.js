@@ -1,5 +1,7 @@
 // Description: Main JS file for the website
 
+
+// To make the whole li clickable
 function linkInWholeLi() {
     document.querySelectorAll('nav > ul > li:not(.no-border)').forEach(function (liElement, index) {
         liElement.addEventListener('click', function (event) {
@@ -8,6 +10,7 @@ function linkInWholeLi() {
     });
 }
 
+// Smooth scroll to the element
 function smoothScrollTo(element) {
     const offsetTop = element.offsetTop - ((window.innerHeight - element.offsetHeight) / 2);
     window.scrollTo({
@@ -41,6 +44,7 @@ function attachEventListenerForLinks() {
     });
 }
 
+// Event listeners
 document.addEventListener("DOMContentLoaded", function () {
     linkInWholeLi();
     attachEventListenerForLinks();

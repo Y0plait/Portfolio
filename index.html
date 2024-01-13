@@ -6,51 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Portfolio</title>
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <nav>
 
         <ul>
-            <li class="no-border"><img src="https://images.pngnice.com/download/2007/Boy-Emoji-Avatar-PNG.png"
-                    alt="avatar"></li>
+            <li class="no-border"><img src="media/avatar.svg" alt="avatar-smile" id="avatar-smile"></li>
             <li><a class="link" href="#presentation">Accueil</a></li>
             <li><a class="link" href="#parcours">Parcours</a></li>
             <li><a class="link" href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="">
-        <div class="section">
-            <section id="presentation">
-                <h1>Portfolio</h1>
-                <p>Hello</p>
-            </section>
-        </div>
-        <div class="section">
-            <section id="parcours">
-                <h2>Parcours</h2>
-                <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
-                    proident
-                    velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
-                    do.
-                    Proident sint nulla duis duis cillum.
-                </p>
-            </section>
-        </div>
-        <div class="section">
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
-                    proident
-                    velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
-                    do.
-                    Proident sint nulla duis duis cillum.
-                </p>
-            </section>
-        </div>
+    <div class="content">
+
+        <section id="presentation">
+            <h1><span id="bjr-langs"></span>Moi c'est Anton.</h1>
+            <pre>Je suis étudiant en première année de BTS à l'insitution des Chartreux, à Lyon.</pre>
+                <div id="map-chartreux">
+                    <iframe frameborder="0" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAjqz2EvTNw-ZmNLT5YMjGwRbjvHkvGkJM&q=Sup%20Alta%2C%20Lyon%20France&zoom=12"></iframe>
+                </div>
+        </section>
+
+        <section id="parcours">
+            <h2>Parcours</h2>
+            <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
+                proident
+                velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
+                do.
+                Proident sint nulla duis duis cillum.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
+                proident
+                velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
+                do.
+                Proident sint nulla duis duis cillum.
+            </p>
+        </section>
     </div>
 </body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="js/animations.js"></script>
 
 </html>

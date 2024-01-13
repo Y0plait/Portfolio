@@ -37,6 +37,9 @@
 
 body {
     background-color: var(--seasalt);
+    font: 1rem "Roboto", sans-serif;
+    overflow: hidden;
+    overflow-y: hidden;
 }
 /* Navbar */
 nav {
@@ -100,4 +103,23 @@ section {
     margin: 0.5% 0 0.5% 10.5%;
     padding: 1vh 1% 1vh 1%;
     background-color: var(--light-blue);
+}
+
+/* Presentation section */
+#avatar-smile {
+    border-radius: 2%;
+}
+
+/* Map */
+#map-chartreux {
+    visibility: visible;
+    height: 50vh;
+    width: 50vw;
+}
+
+#map-chartreux>iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 1rem;
 }
