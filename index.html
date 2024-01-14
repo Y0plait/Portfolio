@@ -2,63 +2,89 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Portfolio</title>
-    <script src="js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="main.css">
+  <script src="js/main.js"></script>
+
+  <!-- CDNs -->
+  <script src="https://kit.fontawesome.com/ec1baca3c9.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li class="no-border"><img src="media/avatar.svg" alt="avatar-smile" id="avatar-smile"></li>
-            <li><a class="link" href="#presentation">Accueil</a></li>
-            <li><a class="link" href="#parcours">Parcours</a></li>
-            <li><a class="link" href="#projets">Projets</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-
-        <section id="presentation">
-            <h1><span id="bjr-langs"></span>Moi c'est Anton.</h1>
-            <pre>Je suis étudiant en première année de BTS à l'insitution des Chartreux, spécialitée SISR (réseaux).</pre>
-            <div id="map-chartreux">
-                <iframe frameborder="0" referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAjqz2EvTNw-ZmNLT5YMjGwRbjvHkvGkJM&q=Sup%20Alta%2C%20Lyon%20France&zoom=12"></iframe>
-            </div>
-            <div id="socials">
-                <pre>Retouvez moi sur :</pre>
-                <div>
-                    <a href="https://www.linkedin.com/in/anton-moulin-057036233/" target="_blank"><img
-                            src="media/linkedin.svg" alt="linkedin"></a>
-                    <a href="https://github.com/Y0plait" target="_blank"><img src="media/github.svg" alt="github"></a>
-                    <a href="mailto:anton.moulin@outlook.com" target="_blank"><img src="media/mail.svg" alt="mail"></a>
-                </div>
-            </div>
-        </section>
-
-        <section id="parcours">
-            <h2>Parcours</h2>
-            <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
-                proident
-                velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
-                do.
-                Proident sint nulla duis duis cillum.
-            </p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt excepteur. In Lorem cupidatat
-                proident
-                velit elit anim duis esse duis laborum dolore in do esse. Excepteur dolore ex laboris mollit esse
-                do.
-                Proident sint nulla duis duis cillum.
-            </p>
-        </section>
+<body class="overflow-hidden">
+  <div class="grid grid-cols-auto h-screen">
+    <!-- Sidebar / Navbar-->
+    <div class="h-screen w-40 bg-white my-[0.25%] fixed flex">
+      <div class="flex flex-col w-full bg-blue-500 h-[99%] rounded-lg">
+        <div class="py-2 justify-center">
+          <img src="media/avatar.svg" alt="avatar-smile" class="min-w-6 max-w-38" />
+        </div>
+        <div class="p-2">
+          <button type="button"
+            class="link-btn cursor-pointer bg-blue-200 hover:bg-blue-700 text-black font-bold py-2 rounded-full w-full"
+            data-href="#presentation">Présentation</button>
+        </div>
+        <div class="p-2">
+          <button type="button"
+            class="link-btn cursor-pointer bg-blue-200 hover:bg-blue-700 text-black font-bold py-2 rounded-full w-full"
+            data-href="#parcours">Parcours</button>
+        </div>
+        <div class="p-2">
+          <button type="button"
+            class="link-btn cursor-pointer bg-blue-200 hover:bg-blue-700 text-black font-bold py-2 rounded-full w-full"
+            data-href="#projets">Projets</button>
+        </div>
+      </div>
     </div>
+
+
+    <!-- Content -->
+    <div class="bg-white pl-0.5 pr-1 ml-40 grid grid-rows-auto">
+      <div class="h-screen my-[0.25%]">
+        <div class="h-[99%] p-5 flex flex-col bg-sky-300 items-center justify-center rounded-lg" id="presentation">
+          <p class="text-xl/loose"><span id="bjr-langs"></span> je suis Anton Moulin.</p>
+          <pre>Étudiant de 18 ans, en première année de BTS à l'insitution des Chartreux, spécialitée SISR (réseaux).</pre>
+          <div id="map-chartreux">
+            <iframe frameborder="0" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAjqz2EvTNw-ZmNLT5YMjGwRbjvHkvGkJM&q=Sup%20Alta%2C%20Lyon%20France&zoom=12"></iframe>
+          </div>
+          <div id="socials">
+            <p>Retouvez-moi sur :</p>
+            <div>
+              <a href="https://www.linkedin.com/in/anton-moulin-057036233/" target="_blank"><img
+                  src="media/linkedin.svg" alt="linkedin" /></a>
+              <a href="https://github.com/Y0plait" target="_blank"><img src="media/github.svg" alt="github" /></a>
+              <a href="mailto:anton.moulin@outlook.com"><img src="media/mail.svg" alt="mail" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-screen my-[0.25%]">
+        <div class="h-[99%] p-5 flex flex-col bg-sky-300 items-center justify-center rounded-lg" id="parcours">
+          <h1>Parcours</h1>
+          <p>Non esse adipisicing minim fugiat aliqua aliquip sint cillum aute ea quis sit. Consectetur ipsum eiusmod ea
+            ex sint exercitation Lorem consequat et cupidatat nulla labore nulla nulla. Excepteur laboris non anim culpa
+            velit velit occaecat labore dolore labore tempor cillum ex. Ea velit cillum ut voluptate in labore mollit
+            deserunt cillum esse enim consectetur. Proident exercitation sunt ipsum est aliquip est.</p>
+        </div>
+      </div>
+      <div class="h-screen my-[0.25%]">
+        <div class="h-[99%] p-5 flex flex-col bg-sky-300 items-center justify-center rounded-lg" id="projets">
+          <h2>Projets</h2>
+          <p>Dolor quis officia excepteur incididunt eiusmod mollit culpa sunt
+            excepteur. In Lorem cupidatat proident velit elit anim duis esse
+            duis laborum dolore in do esse. Excepteur dolore ex laboris mollit
+            esse do. Proident sint nulla duis duis cillum.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="js/animations.js"></script>
 
