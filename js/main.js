@@ -1,4 +1,15 @@
 // Description: Main JS file for the website
+
+
+// To make the whole li clickable
+function linkInWholeLi() {
+    document.querySelectorAll('nav > ul > li:not(.no-border)').forEach(function (liElement, index) {
+        liElement.addEventListener('click', function (event) {
+            document.getElementsByClassName('link')[index].click();
+        });
+    });
+}
+
 // Smooth scroll to the element
 function smoothScrollTo(element) {
     const offsetTop = element.offsetTop - ((window.innerHeight - element.offsetHeight) / 2);
@@ -8,17 +19,33 @@ function smoothScrollTo(element) {
     });
 }
 
-function attachEventListenerForButtons() {
-    const buttons = document.querySelectorAll('.link-btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const href = button.getAttribute('data-href');
-            smoothScrollTo(document.querySelector(href));
+function smoothScrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function smoothScrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
+function attachEventListenerForLinks() {
+    document.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const section = document.querySelector(href);
+            smoothScrollTo(section);
         });
     });
 }
 
 // Event listeners
 document.addEventListener("DOMContentLoaded", function () {
-    attachEventListenerForButtons();
+    linkInWholeLi();
+    attachEventListenerForLinks();
 });
